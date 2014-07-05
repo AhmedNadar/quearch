@@ -20,12 +20,20 @@ gem 'spring',        group: :development
 
 group :development do
   gem 'pry'
-  gem 'pry-byebug'
+#   gem 'pry-byebug'
+end
+
+group :development, :test do
+	gem 'rspec-rails', '~> 3.0.0'
+	gem 'factory_girl_rails', '~> 4.4.1'
+	gem 'database_cleaner'
+    gem 'shoulda-matchers'
 end
 
 group :test do
-  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'capybara', '~> 2.2.1'
 end
+
 
 group :production do
   gem 'rails_12factor', '0.0.2'
