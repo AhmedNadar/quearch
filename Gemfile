@@ -16,7 +16,7 @@ gem 'twitter'
 gem 'devise', '~> 3.2.4'
 gem 'simple_form'
 gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
+# gem 'spring',        group: :development
 
 group :development do
   gem 'pry'
@@ -31,7 +31,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara', '~> 2.2.1'
+  gem 'capybara'
 end
 
 
