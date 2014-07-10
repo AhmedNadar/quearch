@@ -1,14 +1,12 @@
-<div class="jumbotron center">
-<h3>Looking for something simple?</h3>
-<%= form_tag("/", method: "get") do %>
 
+	<h1 class="animated hiding" data-animation="fadeInDown" data-delay="300">We Are Lit Temple</h1>
+	<h3 class="animated hiding" data-animation="fadeInDown" data-delay="600">Looking for something simple?</h3>
 
-  <p><%= text_field_tag :q, nil, class: 'input', placeholder: 'What topic?', autofocus: true %></p>
-  <p><%= submit_tag 'Fetch', class: "btn btn-lg btn-success" %></p>
-
-  <% if params[:q].blank? %>
-    <% params[:q] = 'all' %>
-  <% end %>
-
-<% end %>
-</div>
+	<%= form_tag("/", method: "get", class: 'litform') do %>
+	  <p><%= text_field_tag :q, nil, class: 'input animated hiding', placeholder: 'What topic?', autofocus: true, data: {animation: "fadeIn", delay: "1200"} %></p>
+	  <p><%= submit_tag 'Find more', class: "btn btn-blue animated hiding", data: {animation: "fadeIn", delay: "1200"} %></p>
+	  <% if params[:q].blank? %>
+	    <% params[:q] = 'all' %>
+	  <% end %>
+	<% end %>
+<h3 class="animated hiding" data-animation="fadeIn" data-delay="900">We Have Made Search A Lot Of Fun.</h3>
