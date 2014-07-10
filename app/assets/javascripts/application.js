@@ -13,6 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require isotope.pkgd.min
 //= require html5shiv
+//= require jquery.scrollTo.min
+//= require jquery.nav.min
+//= require jquery.appear.min
+//= require respond.min
 //= require script
 //= require_tree .

@@ -27,28 +27,28 @@ function initNavbar() {
         }
     });
 }
-function initPortfolio () {
-    var portfolio = $('#portfolio');
-    var items = $('.items', portfolio); 
-    var filters = $('.filters li a', portfolio); 
+// function initPortfolio () {
+//     var portfolio = $('#portfolio');
+//     var items = $('.items', portfolio); 
+//     var filters = $('.filters li a', portfolio); 
 
-    items.imagesLoaded(function() {
-        items.isotope({
-            itemSelector: '.item',
-            layoutMode: 'fitRows',
-            transitionDuration: '0.7s'
-        });
-    });
+//     items.imagesLoaded(function() {
+//         items.isotope({
+//             itemSelector: '.item',
+//             layoutMode: 'fitRows',
+//             transitionDuration: '0.7s'
+//         });
+//     });
     
-    filters.click(function(){
-        var el = $(this);
-        filters.removeClass('active');
-        el.addClass('active');
-        var selector = el.attr('data-filter');
-        items.isotope({ filter: selector });
-        return false;
-    });   
-}
+//     filters.click(function(){
+//         var el = $(this);
+//         filters.removeClass('active');
+//         el.addClass('active');
+//         var selector = el.attr('data-filter');
+//         items.isotope({ filter: selector });
+//         return false;
+//     });   
+// }
 function initAnimations() {
     $('.animated').appear(function () {
         var el = $(this);
@@ -77,15 +77,15 @@ function initAnimations() {
 	});
 }
 
-function initTwitterFeed() {
+// function initTwitterFeed() {
     /* More about fetch params on http://www.jasonmayes.com/projects/twitterApi */
-    twitterFetcher.fetch('347101057018638336', '', 1, true, false, false, '', true, handleTweets, false);
-}
+//    twitterFetcher.fetch('347101057018638336', '', 1, true, false, false, '', true, handleTweets, false);
+//}
 $(document).ready(function () {
     initNavbar();
-    initPortfolio();
+    // initPortfolio();
     initAnimations();
-    initTwitterFeed();
+    // initTwitterFeed();
 });
 $(window).load(function () {
     $(".loader .fading-line").fadeOut();
