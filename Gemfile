@@ -3,13 +3,11 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.1'
 gem 'pg'
-gem 'sass-rails', '~> 4.0.3'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'nokogiri'
-gem 'bootstrap-sass', '~> 3.1.1'
 gem 'sprockets', '2.11.0'
 gem 'mechanize'
 gem 'twitter'
@@ -17,6 +15,13 @@ gem 'devise', '~> 3.2.4'
 gem 'simple_form'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'spring',        group: :development
+
+group :frontend do
+	gem 'bootstrap-sass',  '~> 3.2.0'
+	gem 'sass-rails', '~> 4.0.3'
+	gem 'font-awesome-sass'
+	gem 'autoprefixer-rails'
+end
 
 group :development do
   gem 'pry'
@@ -27,7 +32,7 @@ group :development, :test do
 	gem 'rspec-rails', '~> 3.0.0'
 	gem 'factory_girl_rails', '~> 4.4.1'
 	gem 'database_cleaner'
-    gem 'shoulda-matchers'
+  gem 'shoulda-matchers'
 end
 
 group :test do
