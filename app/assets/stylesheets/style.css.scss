@@ -359,3 +359,26 @@ a:focus {
   #portfolio .items li { width: 100% }
   #testimonials .quote { padding: 0 30px }
 }
+
+
+// fix from old style
+.litform{
+  margin: 20px auto;
+}
+.litform .input {
+  background: #E6E6E6;
+  margin: 5px 0;
+  width: 20%;
+  min-width: 150px;
+  height: 2.0em;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+}
+
+.litform .btn {
+  width: 10%;
+}
+
