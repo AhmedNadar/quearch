@@ -3,6 +3,10 @@
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+	<div>
+  <%= f.text_field :username, autofocus: true, class: "input", placeholder: "user name" %></div>
+
   <div>
   <%= f.email_field :email, autofocus: true, class: "input", placeholder: "email" %></div>
 
