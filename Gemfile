@@ -16,12 +16,12 @@ gem 'simple_form'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 # gem 'spring',        group: :development
 
-group :frontend do
+
 	gem 'bootstrap-sass',  '~> 3.2.0'
 	gem 'sass-rails', '~> 4.0.3'
-	gem 'font-awesome-sass'
+	gem "font-awesome-rails"
 	gem 'autoprefixer-rails'
-end
+
 
 group :development do
   gem 'pry'

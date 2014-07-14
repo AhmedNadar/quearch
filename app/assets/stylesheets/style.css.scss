@@ -383,3 +383,218 @@ a:focus {
   width: 10%;
 }
 
+// #searches {
+//   background-color: #f7f7f7;
+//   border-bottom: solid 1px #e7e7e7;
+//   position: relative;
+//   background: url('bg02.png');
+// }
+// #searches .search{
+//     background: linear-gradient(#ffffff, #CECBCB);
+// }
+// .page .border {
+//   width: 380px;
+// }
+
+
+/* Feature Icon */
+
+    .feature-icon
+    {
+      display: inline-block;
+      position: relative;
+      padding-bottom: 5em;
+      margin-bottom: 2.75em;
+      cursor: default;
+    }
+    
+      .feature-icon .fa
+      {
+        display: inline-block;
+        width: 2em;
+        height: 2em;
+        font-size: 4.5em;
+        border-radius: 100%;
+        box-shadow: inset 0 0 0 1px #666;
+        color: #666;
+        line-height: 2.1em;
+      }
+    
+      .feature-icon:before
+      {
+        content: '';
+        background: #666;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -0.325em;
+        width: 0.65em;
+        height: 0.65em;
+        display: block;
+        border-radius: 100%;
+      }
+
+      .feature-icon:after
+      {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0.65em;
+        width: 1px;
+        height: 4.35em;
+        background: #666;
+        margin-left: -0.5px;
+      }
+
+      .dark .feature-icon
+      {
+      }
+
+        .dark .feature-icon .fa
+        {
+          background: rgba(255,255,255,0.15);
+          box-shadow: inset 0 0 0 1px rgba(255,255,255,0.5);
+          color: #fff;
+        }
+      
+        .dark .feature-icon:before
+        {
+          background: rgba(255,255,255,0.5);
+        }
+
+        .dark .feature-icon:after
+        {
+          background: rgba(255,255,255,0.5);
+        }
+
+  /* Dark */
+
+    .dark
+    {
+      color: #aaa;
+      color: rgba(255,255,255,0.65);
+    }
+
+
+// ========================================== 
+
+  /* Pennant */
+
+    .pennant
+    {
+      position: relative;
+      display: inline-block;
+      background-color: rgb(255, 69, 69);
+      width: 9em;
+      padding: 1.5em 0 0.5em 0;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      margin-bottom: 25px;
+    }
+    
+      .pennant:after
+      {
+        content: '';
+        position: absolute;
+        bottom: -1.98em;
+        left: 0;
+        border-top: solid 2em rgb(255, 69, 69);
+        border-left: solid 4.5em transparent;
+        border-right: solid 4.5em transparent;
+      }
+    
+      .pennant span
+      {
+        display: block;
+        margin: 0 auto;
+      }
+      
+        .pennant span:before
+        {
+          font-size: 4.5em;
+          color: #fff;
+        }
+
+      .pennant-alt
+      {
+        background-color: #ff6600;
+      }
+      
+        .pennant-alt:after
+        {
+          border-top-color: #ff6600;
+        }
+
+      .pennant-alt2
+      {
+        background-color: #55acee;
+      }
+      
+        .pennant-alt2:after
+        {
+          border-top-color: #55acee;
+        }
+// ----------------------------- 
+.fa-gear:before, .fa-cog:before {
+content: "\f013";
+}
+.fa:before {
+display: inline-block;
+font-family: FontAwesome;
+font-size: 1.25em;
+text-decoration: none;
+font-style: normal;
+font-weight: normal;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+li span.fa{
+margin: 0 15px 0 0;
+display: block;
+float: left;
+}
+
+.row .middle {
+box-shadow: 16px 0px 0px 0px #fff,
+ 17px 0px 0px 0px #ccc, 
+ -16px 0px 0px 0px #fff, 
+ -17px 0px 0px 0px #ccc, 
+ -16px -45px 0px 0px #fff, 
+ 16px -45px 0px 0px #fff, 
+ -16px 45px 0px 0px #fff, 
+ 16px 45px 0px 0px #fff, 
+ -16px 0px 45px 0px rgba(0,0,0,0.15),
+ 16px 0px 45px 0px rgba(0,0,0,0.15);  
+}
+
+.content .heading {
+  margin: 0 0 46px 0;
+}
+
+ul.headline_list {
+  text-align: left;
+  list-style: none outside none;
+}
+ul.headline_list li:first-child {
+    border-top: 0 none;
+    padding-top: 0;
+}
+ul.headline_list li {
+    border-top: 1px solid #eee;
+    padding: 0.55em 0;
+}
+
+ul.headline_list li:hover {
+    background-color: #EEE;
+    border-bottom: 0px solid #2F2F2F;
+}
+
+
+#navbar-top .navbar{
+  background-color: #34495E;
+  }
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-brand {
+color: #ffffff;
+}

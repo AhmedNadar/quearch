@@ -1,46 +1,77 @@
-<div class="container-fluid centered">
-  <div>
-    <%#= render 'layouts/form' %>
-  </div>
-
-  <div class="content-wrapper">
-    <div class="reddit">
-      <div class="col-xs-6 col-md-4">
-        <h5 class="sec-heading">Reddit:</br><%=link_to "#{@reddit_query}", "http://reddit.com/r/#{@reddit_query}", target: "_" %></h5>
-        <ol class="headline_list">
-          <% @fetch_reddit.each do |url| %>
-            <li><%= link_to url[:content], url[:href], target: '_' %></li>
-          <% end %>
-        </ol>
+<section id="searches" class="page">
+  <div class="container">
+    <div class="content text-center">
+      <div class="heading">
+        <h2>What the world says about <strong>"<%= ("#{params[:q]}") %>"</strong></h2>
+        <div class="border"></div>
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p> -->
       </div>
-    </div>
-
-    <div class="hn_news">
-      <div class="col-xs-6 col-md-4">
-        <h5 class="sec-heading">Hacker News:</br>(work in progress)</h5>
-        <ol class="headline_list">
-          <% @fetch_hn.each do |url| %>
-            <li><%= link_to url[:content], url[:href], target: '_' %></li>
-          <% end %>
-        </ol>
-      </div>
-    </div>
-
-    <div class="twitter">
-      <div class="col-xs-6 col-md-4">
-        <h5 class="sec-heading">Twitter:</br><%= link_to "#{params[:q]}", "https://twitter.com/search?q=#{@tweet_query}&src=typd", target: "_"%>:</h5>
-        <ol class="headline_list">
-          <% @tweets.each do |tweet| %>
-            <% url = URI.extract(tweet).join(' ') %>
-            <% if tweet.include?('http') && url.length > 15 %>
-              <% link = url.match(/https?:\/\/[\S]+/) %>
-              <li><%= tweet.sub("#{link}", '') %>
-              <%= link_to "#{link}",  "#{link}", target: "_" %></li>
-            <% end %>
-          <% end %>
-          </ol>
+      <div class="row">
+        <div class="4u">
+          <div class="col-lg-4 service animated hiding search" data-animation="fadeInUp" data-delay="300">
+            <section class="first">
+              <span class="pennant"><span class="fa fa-reddit fa-6"></span></span>
+              <header>
+                <!-- <h2>Ipsum consequat</h2> -->
+                <h3><%=link_to "#{@reddit_query}", "http://reddit.com/r/#{@reddit_query}", target: "_" %></h3>
+              </header>
+              <!-- <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p> -->
+                <ul class="headline_list">
+                  <% @fetch_reddit.each do |url| %>
+                    <li>
+                      <span class="fa fa-globe"></span>
+                      <%= link_to url[:content], url[:href], target: '_' %>
+                    </li>
+                  <% end %>
+                </ul>
+            </section>
+          </div>
         </div>
-      </div>
+        <div class="4u">
+          <div class="col-lg-4 service animated hiding search" data-animation="fadeInUp" data-delay="300">
+            <section class="middle">
+              <span class="pennant pennant-alt2"><span class="fa fa-twitter fa-6"></span></span>
+              <header>
+                <!-- <h2>Ipsum consequat</h2> -->
+                <h3><%= link_to "#{params[:q]}", "https://twitter.com/search?q=#{@tweet_query}&src=typd", target: "_"%></h3>
+              </header>
+              <ul class="headline_list">
+                <% @tweets.each do |tweet| %>
+                  <% url = URI.extract(tweet).join(' ') %>
+                  <% if tweet.include?('http') && url.length > 15 %>
+                    <% link = url.match(/https?:\/\/[\S]+/) %>
+                    <li>
+                      <span class="fa fa-globe"></span>
+                      <%= tweet.sub("#{link}", '') %>
+                      <%= link_to "#{link}",  "#{link}", target: "_" %>
+                    </li>
+                  <% end %>
+                <% end %>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <div class="4u">
+          <div class="col-lg-4 service animated hiding search" data-animation="fadeInUp" data-delay="300">
+            <section class="last">
+              <span class="pennant pennant-alt"><span class="fa fa-hacker-news fa-6"></span></span>
+              <header>
+                <h3 class="sec-heading">Hacker News:</br>(work in progress)</h3>
+              </header>
+              <!-- <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p> -->
+                <ul class="headline_list">
+                  <% @fetch_hn.each do |url| %>
+                    <li>
+                      <span class="fa fa-globe"></span>
+                      <%= link_to url[:content], url[:href], target: '_' %>
+                    </li>
+                  <% end %>
+                </ul>
+            </section>
+          </div>
+        </div>
+      </div>  
     </div>
   </div>
-</div>
+</section>
+
