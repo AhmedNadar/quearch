@@ -1,28 +1,7 @@
-== README
+## Lit Temple
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Looking for something simple?
 
-Things you may want to cover:
+We Have Made Search A Lot Of Fun.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+By: [Freqn](http://twitter.com/freqn)
